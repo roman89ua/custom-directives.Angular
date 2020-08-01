@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Angular directives</h1>
+  <!--or [appStyle]="'red'"-->
+  <p
+    appStyle="red"
+    fontWeight="bold"
+    [borderStyles]="{
+      border: '1px solid blue'
+    }"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, voluptatem.
+  </p>
+  <p
+    appStyle="blue"
+    fontWeight="bold"
+    [borderStyles]="{
+      border: '1px solid red',
+      borderRadius: '10px'
+    }"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, voluptatem.
+  </p>
+</div>
