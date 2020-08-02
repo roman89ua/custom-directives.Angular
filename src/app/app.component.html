@@ -1,5 +1,6 @@
 <div class="container">
   <h1>Angular directives</h1>
+  <h2>Style directives</h2>
   <!--or [appStyle]="'red'"-->
   <p
     appStyle="orange"
@@ -21,3 +22,49 @@
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, voluptatem.
   </p>
 </div>
+<h2>Structural directives</h2>
+<button class="btn" (click) = "isVisible= !isVisible">*ngIf toggle</button>
+<div class="wrap" *ngIf="isVisible">
+  <h3>*ngIf structural directive</h3>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Consequatur dicta dignissimos doloremque eum eveniet explicabo fugiat hic,
+    libero quae rem.
+  </p>
+</div>
+
+<ng-template [ngIf]="isVisible">
+  <h3>*ngIf behind the stage</h3>
+  <div class="wrap">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Consequatur dicta dignissimos doloremque eum eveniet explicabo fugiat hic,
+      libero quae rem.
+    </p>
+  </div>
+</ng-template>
+
+<button
+  class="btn"
+  (click)="isVisibleByAppIfNot = !isVisibleByAppIfNot"
+>*appIfNot toggle
+</button>
+<div class="wrap" *appIfNot="isVisibleByAppIfNot">
+  <h3>Custom structural directive *appIfNot</h3>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Consequatur dicta dignissimos doloremque eum eveniet explicabo fugiat hic,
+    libero quae rem.
+  </p>
+</div>
+
+<ng-template [appIfNot]="isVisibleByAppIfNot">
+  <h3>*appIfNot behind the stage</h3>
+  <div class="wrap">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Consequatur dicta dignissimos doloremque eum eveniet explicabo fugiat hic,
+      libero quae rem.
+    </p>
+  </div>
+</ng-template>
